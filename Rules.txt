@@ -1,0 +1,271 @@
+Call:
+rpart(formula = Absenteesmtimeinhours ~ ., data = train, method = "anova")
+  n= 435 
+
+           CP nsplit rel error    xerror       xstd
+1  0.14381985      0 1.0000000 1.0098343 0.08957839
+2  0.03477398      2 0.7123603 0.7220302 0.07965296
+3  0.03347570      3 0.6775863 0.7752991 0.08627277
+4  0.02518850      4 0.6441106 0.7534402 0.08669075
+5  0.01620263      5 0.6189221 0.7400358 0.08599733
+6  0.01570675      6 0.6027195 0.7180058 0.08400127
+7  0.01437599      7 0.5870127 0.7265868 0.08439475
+8  0.01213475      8 0.5726367 0.7573169 0.08694137
+9  0.01143979      9 0.5605020 0.7472661 0.08716510
+10 0.01130695     10 0.5490622 0.7417998 0.08942756
+11 0.01000000     13 0.5151414 0.7512407 0.09043718
+
+Variable importance
+     Reasonforabsence   Disciplinaryfailure Transportationexpense 
+                   33                    14                     7 
+Distancefromresidence         Bodymassindex                   Age 
+                    5                     5                     5 
+        Socialdrinker                    ID           Servicetime 
+                    5                     5                     4 
+                  Son        Monthofabsence                Height 
+                    4                     3                     3 
+      WorkloadAverage                   Pet             Education 
+                    2                     1                     1 
+              Seasons             Dayofweek 
+                    1                     1 
+
+Node number 1: 435 observations,    complexity param=0.1438199
+  mean=4.350888, MSE=11.25555 
+  left son=2 (265 obs) right son=3 (170 obs)
+  Primary splits:
+      Reasonforabsence      < 22.5        to the right, improve=0.13153500, (0 missing)
+      Disciplinaryfailure   < 0.8301272   to the right, improve=0.06485103, (0 missing)
+      Son                   < 1.5         to the left,  improve=0.05931087, (0 missing)
+      Transportationexpense < 0.4746304   to the left,  improve=0.05793629, (0 missing)
+      ID                    < 26.5        to the right, improve=0.04239197, (0 missing)
+  Surrogate splits:
+      Transportationexpense < 1.127482    to the left,  agree=0.653, adj=0.112, (0 split)
+      Disciplinaryfailure   < 0.3301272   to the left,  agree=0.651, adj=0.106, (0 split)
+      Pet                   < 3           to the left,  agree=0.648, adj=0.100, (0 split)
+      Distancefromresidence < 1.356244    to the left,  agree=0.634, adj=0.065, (0 split)
+      Servicetime           < -1.931044   to the right, agree=0.634, adj=0.065, (0 split)
+
+Node number 2: 265 observations,    complexity param=0.0334757
+  mean=3.376335, MSE=6.463034 
+  left son=4 (207 obs) right son=5 (58 obs)
+  Primary splits:
+      Son                   < 1.5         to the left,  improve=0.09569810, (0 missing)
+      Reasonforabsence      < 26.5        to the right, improve=0.06346065, (0 missing)
+      Servicetime           < -0.7655617  to the left,  improve=0.05388884, (0 missing)
+      Age                   < -0.9628883  to the left,  improve=0.05388884, (0 missing)
+      Transportationexpense < 0.4746304   to the left,  improve=0.05059523, (0 missing)
+  Surrogate splits:
+      Transportationexpense < 0.3645108   to the left,  agree=0.887, adj=0.483, (0 split)
+      Height                < -0.7964976  to the right, agree=0.864, adj=0.379, (0 split)
+      Age                   < 1.701849    to the left,  agree=0.830, adj=0.224, (0 split)
+      Socialsmoker          < 0.5         to the left,  agree=0.815, adj=0.155, (0 split)
+      Bodymassindex         < 1.12062     to the left,  agree=0.796, adj=0.069, (0 split)
+
+Node number 3: 170 observations,    complexity param=0.1438199
+  mean=5.870045, MSE=14.9379 
+  left son=6 (21 obs) right son=7 (149 obs)
+  Primary splits:
+      Reasonforabsence      < 0.5         to the left,  improve=0.30097710, (0 missing)
+      Disciplinaryfailure   < 0.3301272   to the right, improve=0.24958560, (0 missing)
+      WorkloadAverage       < 1.001764    to the left,  improve=0.04489680, (0 missing)
+      Bodymassindex         < 1.12062     to the right, improve=0.04324479, (0 missing)
+      Transportationexpense < 0.2622569   to the left,  improve=0.04312528, (0 missing)
+  Surrogate splits:
+      Disciplinaryfailure < 0.3301272   to the right, agree=0.982, adj=0.857, (0 split)
+      Monthofabsence      < 0.5         to the left,  agree=0.894, adj=0.143, (0 split)
+      Bodymassindex       < 1.466141    to the right, agree=0.894, adj=0.143, (0 split)
+
+Node number 4: 207 observations,    complexity param=0.01570675
+  mean=2.960042, MSE=5.023696 
+  left son=8 (199 obs) right son=9 (8 obs)
+  Primary splits:
+      Age                   < 1.226003    to the left,  improve=0.07395178, (0 missing)
+      Bodymassindex         < 1.811661    to the left,  improve=0.07395178, (0 missing)
+      Distancefromresidence < -0.6478874  to the right, improve=0.05323853, (0 missing)
+      WorkloadAverage       < 0.4556617   to the right, improve=0.04995116, (0 missing)
+      Reasonforabsence      < 26.5        to the right, improve=0.04797232, (0 missing)
+  Surrogate splits:
+      Bodymassindex < 1.811661    to the left,  agree=1.000, adj=1.000, (0 split)
+      Height        < -1.058256   to the right, agree=0.986, adj=0.625, (0 split)
+
+Node number 5: 58 observations,    complexity param=0.01620263
+  mean=4.862069, MSE=8.774078 
+  left son=10 (20 obs) right son=11 (38 obs)
+  Primary splits:
+      Servicetime           < 0.2704223   to the right, improve=0.1558878, (0 missing)
+      Transportationexpense < 0.9465714   to the left,  improve=0.1470871, (0 missing)
+      Age                   < -0.2015348  to the right, improve=0.1470871, (0 missing)
+      Height                < -2.10529    to the left,  improve=0.1433013, (0 missing)
+      Bodymassindex         < 1.005447    to the right, improve=0.1433013, (0 missing)
+  Surrogate splits:
+      Age                   < 0.3694804   to the right, agree=0.983, adj=0.95, (0 split)
+      Transportationexpense < 0.4746304   to the left,  agree=0.966, adj=0.90, (0 split)
+      Socialdrinker         < 0.5         to the left,  agree=0.948, adj=0.85, (0 split)
+      Distancefromresidence < -0.4405635  to the left,  agree=0.914, adj=0.75, (0 split)
+      ID                    < 29.5        to the right, agree=0.862, adj=0.60, (0 split)
+
+Node number 6: 21 observations
+  mean=0.2220402, MSE=0.4825977 
+
+Node number 7: 149 observations,    complexity param=0.03477398
+  mean=6.666072, MSE=11.8456 
+  left son=14 (76 obs) right son=15 (73 obs)
+  Primary splits:
+      Socialdrinker         < 0.5         to the left,  improve=0.09646439, (0 missing)
+      Transportationexpense < 0.2622569   to the left,  improve=0.09394707, (0 missing)
+      ID                    < 25          to the right, improve=0.07971599, (0 missing)
+      Distancefromresidence < -0.3023475  to the left,  improve=0.07619411, (0 missing)
+      Reasonforabsence      < 18.5        to the left,  improve=0.07564596, (0 missing)
+  Surrogate splits:
+      Distancefromresidence < -0.1295775  to the left,  agree=0.852, adj=0.699, (0 split)
+      Transportationexpense < 0.2622569   to the left,  agree=0.839, adj=0.671, (0 split)
+      ID                    < 16.5        to the right, agree=0.785, adj=0.562, (0 split)
+      Education             < 1.5         to the right, agree=0.705, adj=0.397, (0 split)
+      Servicetime           < -0.5065657  to the left,  agree=0.678, adj=0.342, (0 split)
+
+Node number 8: 199 observations,    complexity param=0.01130695
+  mean=2.837833, MSE=4.5578 
+  left son=16 (54 obs) right son=17 (145 obs)
+  Primary splits:
+      WorkloadAverage  < 0.4556617   to the right, improve=0.05484939, (0 missing)
+      Reasonforabsence < 26.5        to the right, improve=0.03205274, (0 missing)
+      Height           < -0.2729808  to the left,  improve=0.02998294, (0 missing)
+      Bodymassindex    < 0.3144058   to the left,  improve=0.02838925, (0 missing)
+      Age              < -1.248396   to the left,  improve=0.02781650, (0 missing)
+  Surrogate splits:
+      Monthofabsence < 1.5         to the left,  agree=0.824, adj=0.352, (0 split)
+      Height         < -0.2729808  to the left,  agree=0.769, adj=0.148, (0 split)
+      Age            < -1.248396   to the left,  agree=0.744, adj=0.056, (0 split)
+      Pet            < 1.5         to the right, agree=0.739, adj=0.037, (0 split)
+
+Node number 9: 8 observations
+  mean=6, MSE=7 
+
+Node number 10: 20 observations
+  mean=3.25, MSE=6.0875 
+
+Node number 11: 38 observations,    complexity param=0.01437599
+  mean=5.710526, MSE=8.100416 
+  left son=22 (14 obs) right son=23 (24 obs)
+  Primary splits:
+      Reasonforabsence      < 27          to the right, improve=0.2286667, (0 missing)
+      Dayofweek             < 4.5         to the right, improve=0.2179486, (0 missing)
+      WorkloadAverage       < 0.03802559  to the left,  improve=0.1529763, (0 missing)
+      Distancefromresidence < 0.7688264   to the right, improve=0.1047277, (0 missing)
+      Son                   < 3.5         to the right, improve=0.1047277, (0 missing)
+  Surrogate splits:
+      Dayofweek             < 5.5         to the right, agree=0.895, adj=0.714, (0 split)
+      ID                    < 16.5        to the right, agree=0.842, adj=0.571, (0 split)
+      Age                   < -0.2015348  to the right, agree=0.842, adj=0.571, (0 split)
+      Distancefromresidence < 0.7688264   to the right, agree=0.816, adj=0.500, (0 split)
+      Servicetime           < -0.2475697  to the left,  agree=0.816, adj=0.500, (0 split)
+
+Node number 14: 76 observations,    complexity param=0.0251885
+  mean=5.618421, MSE=12.28861 
+  left son=28 (56 obs) right son=29 (20 obs)
+  Primary splits:
+      Reasonforabsence      < 18.5        to the left,  improve=0.13205110, (0 missing)
+      Distancefromresidence < -0.3023475  to the left,  improve=0.11691890, (0 missing)
+      WorkloadAverage       < -0.8075887  to the left,  improve=0.09111436, (0 missing)
+      Hittarget             < 1.14239     to the right, improve=0.06847360, (0 missing)
+      ID                    < 11.5        to the right, improve=0.06695783, (0 missing)
+  Surrogate splits:
+      Distancefromresidence < -0.3023475  to the left,  agree=0.776, adj=0.15, (0 split)
+      ID                    < 11.5        to the right, agree=0.763, adj=0.10, (0 split)
+      Seasons               < 1.5         to the right, agree=0.750, adj=0.05, (0 split)
+      Transportationexpense < 1.402781    to the left,  agree=0.750, adj=0.05, (0 split)
+      Pet                   < 3           to the left,  agree=0.750, adj=0.05, (0 split)
+
+Node number 15: 73 observations,    complexity param=0.01213475
+  mean=7.756778, MSE=9.052074 
+  left son=30 (57 obs) right son=31 (16 obs)
+  Primary splits:
+      Bodymassindex         < -0.4918085  to the right, improve=0.08991164, (0 missing)
+      WorkloadAverage       < 1.710005    to the left,  improve=0.07493452, (0 missing)
+      ID                    < 4           to the left,  improve=0.06754409, (0 missing)
+      Transportationexpense < -0.2647439  to the left,  improve=0.06236971, (0 missing)
+      Servicetime           < 1.176908    to the right, improve=0.06236971, (0 missing)
+  Surrogate splits:
+      ID               < 19.5        to the left,  agree=0.959, adj=0.812, (0 split)
+      Son              < 3.5         to the left,  agree=0.877, adj=0.437, (0 split)
+      Height           < -0.7964976  to the right, agree=0.877, adj=0.437, (0 split)
+      Age              < 0.9404955   to the left,  agree=0.822, adj=0.187, (0 split)
+      Reasonforabsence < 2           to the right, agree=0.808, adj=0.125, (0 split)
+
+Node number 16: 54 observations
+  mean=2.018519, MSE=1.314472 
+
+Node number 17: 145 observations,    complexity param=0.01130695
+  mean=3.142957, MSE=5.422567 
+  left son=34 (79 obs) right son=35 (66 obs)
+  Primary splits:
+      Reasonforabsence      < 26.5        to the right, improve=0.04919181, (0 missing)
+      Distancefromresidence < -0.9588734  to the right, improve=0.03763218, (0 missing)
+      ID                    < 31          to the left,  improve=0.03409391, (0 missing)
+      Transportationexpense < -1.185029   to the right, improve=0.03409391, (0 missing)
+      Height                < 0.7740529   to the left,  improve=0.02987258, (0 missing)
+  Surrogate splits:
+      Monthofabsence < 6.5         to the left,  agree=0.731, adj=0.409, (0 split)
+      Age            < 0.3694804   to the right, agree=0.731, adj=0.409, (0 split)
+      Servicetime    < 0.6589163   to the right, agree=0.703, adj=0.348, (0 split)
+      Socialdrinker  < 0.5         to the right, agree=0.703, adj=0.348, (0 split)
+      Hittarget      < -0.1372732  to the right, agree=0.669, adj=0.273, (0 split)
+
+Node number 22: 14 observations
+  mean=3.928571, MSE=1.494898 
+
+Node number 23: 24 observations,    complexity param=0.01143979
+  mean=6.75, MSE=9.020833 
+  left son=46 (9 obs) right son=47 (15 obs)
+  Primary splits:
+      Seasons          < 1.5         to the left,  improve=0.25871180, (0 missing)
+      WorkloadAverage  < -0.6151195  to the left,  improve=0.25871180, (0 missing)
+      Reasonforabsence < 23.5        to the left,  improve=0.24249420, (0 missing)
+      Hittarget        < -0.7771047  to the left,  improve=0.08144511, (0 missing)
+      Monthofabsence   < 9.5         to the left,  improve=0.04453976, (0 missing)
+  Surrogate splits:
+      Monthofabsence  < 8.5         to the left,  agree=0.875, adj=0.667, (0 split)
+      WorkloadAverage < -0.7752708  to the left,  agree=0.792, adj=0.444, (0 split)
+      Height          < 0.2505361   to the right, agree=0.708, adj=0.222, (0 split)
+      Bodymassindex   < 0.1992324   to the right, agree=0.708, adj=0.222, (0 split)
+      ID              < 12          to the left,  agree=0.667, adj=0.111, (0 split)
+
+Node number 28: 56 observations
+  mean=4.857143, MSE=11.83673 
+
+Node number 29: 20 observations
+  mean=7.75, MSE=7.3875 
+
+Node number 30: 57 observations
+  mean=7.278803, MSE=7.302286 
+
+Node number 31: 16 observations
+  mean=9.459561, MSE=11.57234 
+
+Node number 34: 79 observations
+  mean=2.670886, MSE=3.765102 
+
+Node number 35: 66 observations,    complexity param=0.01130695
+  mean=3.708012, MSE=6.820469 
+  left son=70 (59 obs) right son=71 (7 obs)
+  Primary splits:
+      Reasonforabsence < 25.5        to the left,  improve=0.17250960, (0 missing)
+      Age              < -1.248396   to the left,  improve=0.08628541, (0 missing)
+      WorkloadAverage  < -0.01554133 to the left,  improve=0.08195143, (0 missing)
+      Pet              < 1.5         to the right, improve=0.07638755, (0 missing)
+      Height           < -0.2729808  to the left,  improve=0.06986373, (0 missing)
+  Surrogate splits:
+      WorkloadAverage < 0.203148    to the left,  agree=0.909, adj=0.143, (0 split)
+
+Node number 46: 9 observations
+  mean=4.777778, MSE=6.17284 
+
+Node number 47: 15 observations
+  mean=7.933333, MSE=6.995556 
+
+Node number 70: 59 observations
+  mean=3.334386, MSE=5.926076 
+
+Node number 71: 7 observations
+  mean=6.857143, MSE=3.265306 
+JITHRABIJU
